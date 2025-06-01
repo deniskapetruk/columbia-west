@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.columbiawestcollege.edu	TRUE	/	FALSE	1999999999	sessionid	eyJyZWRpcmVjdF9jb3VudCI6MH0:1uLaiO:P3RalzSQOT-HNnHZksK-xXfjdYuKhDBa8MW1jTyoA6g
+www.columbiawestcollege.edu	TRUE	/	FALSE	1999999999	SameSite	Strict
+

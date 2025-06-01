@@ -1,0 +1,54 @@
+/* Стили для таблицы оценок */
+.grades-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 2rem;
+}
+
+.grades-table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.grades-table th {
+    background-color: #f3f8ff;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 600;
+}
+
+.grades-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.grades-table tr:nth-child(even) {
+    background-color: #f9fbfe;
+}
+
+/* Стили для календаря */
+#calendar {
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fc-event {
+    font-size: 0.9em;
+    padding: 3px 6px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 767px) {
+    .grades-table {
+        font-size: 0.9em;
+    }
+    
+    #calendar {
+        padding: 10px;
+    }
+}
