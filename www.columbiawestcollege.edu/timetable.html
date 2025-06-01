@@ -210,10 +210,9 @@
 
     /* Timetable Table Styling */
     .timetable-table {
-        margin-top: 5rem;
-      width: 100%;               /* 80% of page width */
+      margin-top: 5rem;
+      width: 100%;
       border-collapse: collapse;
-      height: 150%;
       font-family: 'Montserrat', sans-serif;
     }
     .timetable-table th,
@@ -233,6 +232,40 @@
       font-size: 2rem;
       text-align: center;
       color: #333;
+    }
+    /* Responsive adjustments */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+      margin: 0 auto;
+    }
+    @media (max-width: 1024px) {
+      .timetable-table th,
+      .timetable-table td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .timetable-section h2 {
+        font-size: 1.6rem;
+      }
+      .timetable-table th,
+      .timetable-table td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+      }
+    }
+    @media (max-width: 479px) {
+      .timetable-table th,
+      .timetable-table td {
+        padding: 0.3rem;
+        font-size: 0.75rem;
+      }
+      .timetable-section h2 {
+        font-size: 1.4rem;
+      }
     }
   </style>
   <meta name="facebook-domain-verification" content="mlk59ybu44651lzcbhhxjfl8vfae8q" />
@@ -400,103 +433,101 @@
           <div class="container-xlarge">
             <div class="padding-section-large">
               <h2 class="heading-style-h1">Weekly Timetable</h2>
-              <div>
-                <div class="table-wrapper">
-                  <table class="timetable-table">
-                    <thead>
-                      <tr>
-                        <th>Time</th>
-                        <th>Monday</th>
-                        <th>Tuesday</th>
-                        <th>Wednesday</th>
-                        <th>Thursday</th>
-                        <th>Friday</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>8:00 AM – 9:00 AM</td>
-                        <td>English Composition</td>
-                        <td>Calculus I</td>
-                        <td>World History</td>
-                        <td>Biology</td>
-                        <td>English Composition</td>
-                      </tr>
-                      <tr>
-                        <td>9:00 AM – 10:00 AM</td>
-                        <td>Calculus I</td>
-                        <td>World History</td>
-                        <td>Biology</td>
-                        <td>English Composition</td>
-                        <td>Calculus I</td>
-                      </tr>
-                      <tr>
-                        <td>10:00 AM – 11:00 AM</td>
-                        <td>World History</td>
-                        <td>Biology</td>
-                        <td>Introduction to Art</td>
-                        <td>Calculus I</td>
-                        <td>World History</td>
-                      </tr>
-                      <tr>
-                        <td>11:00 AM – 12:00 PM</td>
-                        <td>Biology</td>
-                        <td>Introduction to Art</td>
-                        <td>Physical Education</td>
-                        <td>World History</td>
-                        <td>Biology</td>
-                      </tr>
-                      <tr>
-                        <td>12:00 PM – 1:00 PM</td>
-                        <td>Lunch Break</td>
-                        <td>Lunch Break</td>
-                        <td>Lunch Break</td>
-                        <td>Lunch Break</td>
-                        <td>Lunch Break</td>
-                      </tr>
-                      <tr>
-                        <td>1:00 PM – 2:00 PM</td>
-                        <td>Introduction to Art</td>
-                        <td>Physical Education</td>
-                        <td>Computer Science 101</td>
-                        <td>Physical Education</td>
-                        <td>Introduction to Art</td>
-                      </tr>
-                      <tr>
-                        <td>2:00 PM – 3:00 PM</td>
-                        <td>Physical Education</td>
-                        <td>Computer Science 101</td>
-                        <td>Microeconomics</td>
-                        <td>Computer Science 101</td>
-                        <td>Physical Education</td>
-                      </tr>
-                      <tr>
-                        <td>3:00 PM – 4:00 PM</td>
-                        <td>Computer Science 101</td>
-                        <td>Microeconomics</td>
-                        <td>English Composition</td>
-                        <td>Microeconomics</td>
-                        <td>Computer Science 101</td>
-                      </tr>
-                      <tr>
-                        <td>4:00 PM – 5:00 PM</td>
-                        <td>Microeconomics</td>
-                        <td>English Composition</td>
-                        <td>Calculus I</td>
-                        <td>English Composition</td>
-                        <td>Microeconomics</td>
-                      </tr>
-                      <tr>
-                        <td>5:00 PM – 6:00 PM</td>
-                        <td>Study Hall</td>
-                        <td>Study Hall</td>
-                        <td>Study Hall</td>
-                        <td>Study Hall</td>
-                        <td>Study Hall</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="table-responsive">
+                <table class="timetable-table">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Monday</th>
+                      <th>Tuesday</th>
+                      <th>Wednesday</th>
+                      <th>Thursday</th>
+                      <th>Friday</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>8:00 AM – 9:00 AM</td>
+                      <td>English Composition</td>
+                      <td>Calculus I</td>
+                      <td>World History</td>
+                      <td>Biology</td>
+                      <td>English Composition</td>
+                    </tr>
+                    <tr>
+                      <td>9:00 AM – 10:00 AM</td>
+                      <td>Calculus I</td>
+                      <td>World History</td>
+                      <td>Biology</td>
+                      <td>English Composition</td>
+                      <td>Calculus I</td>
+                    </tr>
+                    <tr>
+                      <td>10:00 AM – 11:00 AM</td>
+                      <td>World History</td>
+                      <td>Biology</td>
+                      <td>Introduction to Art</td>
+                      <td>Calculus I</td>
+                      <td>World History</td>
+                    </tr>
+                    <tr>
+                      <td>11:00 AM – 12:00 PM</td>
+                      <td>Biology</td>
+                      <td>Introduction to Art</td>
+                      <td>Physical Education</td>
+                      <td>World History</td>
+                      <td>Biology</td>
+                    </tr>
+                    <tr>
+                      <td>12:00 PM – 1:00 PM</td>
+                      <td>Lunch Break</td>
+                      <td>Lunch Break</td>
+                      <td>Lunch Break</td>
+                      <td>Lunch Break</td>
+                      <td>Lunch Break</td>
+                    </tr>
+                    <tr>
+                      <td>1:00 PM – 2:00 PM</td>
+                      <td>Introduction to Art</td>
+                      <td>Physical Education</td>
+                      <td>Computer Science 101</td>
+                      <td>Physical Education</td>
+                      <td>Introduction to Art</td>
+                    </tr>
+                    <tr>
+                      <td>2:00 PM – 3:00 PM</td>
+                      <td>Physical Education</td>
+                      <td>Computer Science 101</td>
+                      <td>Microeconomics</td>
+                      <td>Computer Science 101</td>
+                      <td>Physical Education</td>
+                    </tr>
+                    <tr>
+                      <td>3:00 PM – 4:00 PM</td>
+                      <td>Computer Science 101</td>
+                      <td>Microeconomics</td>
+                      <td>English Composition</td>
+                      <td>Microeconomics</td>
+                      <td>Computer Science 101</td>
+                    </tr>
+                    <tr>
+                      <td>4:00 PM – 5:00 PM</td>
+                      <td>Microeconomics</td>
+                      <td>English Composition</td>
+                      <td>Calculus I</td>
+                      <td>English Composition</td>
+                      <td>Microeconomics</td>
+                    </tr>
+                    <tr>
+                      <td>5:00 PM – 6:00 PM</td>
+                      <td>Study Hall</td>
+                      <td>Study Hall</td>
+                      <td>Study Hall</td>
+                      <td>Study Hall</td>
+                      <td>Study Hall</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -592,7 +623,7 @@
                       <a href="students/faqs.html" class="footer-question_link w-inline-block">
                         <div class="margin-bottom margin-xsmall">
                           <div class="icon-1x1-medium w-embed">
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--bx" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-7.414V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z" fill="currentColor"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--bx" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98  a0 0 22zM19 14.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562 0.52-1.855 1.258C7.185 4.074 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z" fill="currentColor"></path></svg>
                           </div>
                         </div>
                         <p class="text-weight-bold">FAQ</p>
@@ -606,7 +637,7 @@
                       <a href="mailto:info@columbiawestcollege.edu" class="footer-question_link w-inline-block">
                         <div class="margin-bottom margin-xsmall">
                           <div class="icon-1x1-medium w-embed">
-                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99 .9-1.99 2L2 18c0 1.1 .9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2 -2-2m0 4l -8 5l -8 -5V6l8 5l8 -5z"></path></svg>
                           </div>
                         </div>
                         <p class="text-weight-bold">Email</p>

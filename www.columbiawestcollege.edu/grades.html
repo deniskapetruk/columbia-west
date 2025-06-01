@@ -207,9 +207,12 @@
       display: none;
     }
 
+    /* Grades Table Styling */
     .grades-table {
       margin-top: 1rem;
-      width: 100%;      
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
       border-collapse: collapse;
       font-family: 'Montserrat', sans-serif;
     }
@@ -224,7 +227,6 @@
       background-color: #E8F4FF;
       font-weight: 600;
     }
-
     .grades-section h2 {
       margin-bottom: 1.5rem;
       font-family: 'Montserrat', sans-serif;
@@ -233,11 +235,12 @@
       color: #333;
     }
 
-    /* Style for the Download PDF button */
+    /* Download PDF button */
     .download-btn {
       display: inline-block;
       margin-bottom: 1rem;
-      margin-left: 80rem;
+      margin-left: auto;
+      margin-right: 10%;
       padding: 0.6rem 1.2rem;
       background-color: #4d65ff;
       color: #fff;
@@ -250,6 +253,52 @@
     }
     .download-btn:hover {
       background-color: #3b4bdb;
+    }
+
+    /* Responsive wrapper */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      width: 100%;
+    }
+    @media (max-width: 1024px) {
+      .grades-table {
+        width: 100%;
+      }
+      .grades-table th,
+      .grades-table td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+      }
+      .grades-section h2 {
+        font-size: 1.8rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .grades-section h2 {
+        font-size: 1.6rem;
+      }
+      .grades-table th,
+      .grades-table td {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+      }
+    }
+    @media (max-width: 479px) {
+      .grades-section h2 {
+        font-size: 1.4rem;
+      }
+      .grades-table th,
+      .grades-table td {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+      }
+      .download-btn {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-size: 0.9rem;
+      }
     }
   </style>
   <meta name="facebook-domain-verification" content="mlk59ybu44651lzcbhhxjfl8vfae8q" />
@@ -418,70 +467,67 @@
             <div class="padding-section-large">
               <h2 class="heading-style-h1">My Grades</h2>
               <!-- Download PDF Button -->
+              <button class="download-btn" onclick="window.print()">Download PDF</button>
 
               <!-- Grades Table (80% width, centered) -->
-              <div>
-                <div class="table-wrapper">
-                  <table class="grades-table">
-                    <thead>
-                      <tr>
-                        <th>Course</th>
-                        <th>Term</th>
-                        <th>Grade (%)</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>English Composition</td>
-                        <td>Spring 2025</td>
-                        <td>88</td>
-                      </tr>
-                      <tr>
-                        <td>Calculus I</td>
-                        <td>Spring 2025</td>
-                        <td>92</td>
-                      </tr>
-                      <tr>
-                        <td>World History</td>
-                        <td>Spring 2025</td>
-                        <td>85</td>
-                      </tr>
-                      <tr>
-                        <td>Biology</td>
-                        <td>Spring 2025</td>
-                        <td>90</td>
-                      </tr>
-                      <tr>
-                        <td>Introduction to Art</td>
-                        <td>Spring 2025</td>
-                        <td>87</td>
-                      </tr>
-                      <tr>
-                        <td>Physical Education</td>
-                        <td>Spring 2025</td>
-                        <td>81</td>
-                      </tr>
-                      <tr>
-                        <td>Computer Science 101</td>
-                        <td>Spring 2025</td>
-                        <td>89</td>
-                      </tr>
-                      <tr>
-                        <td>Microeconomics</td>
-                        <td>Spring 2025</td>
-                        <td>84</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="table-responsive">
+                <table class="grades-table">
+                  <thead>
+                    <tr>
+                      <th>Course</th>
+                      <th>Term</th>
+                      <th>Grade (%)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>English Composition</td>
+                      <td>Spring 2025</td>
+                      <td>88</td>
+                    </tr>
+                    <tr>
+                      <td>Calculus I</td>
+                      <td>Spring 2025</td>
+                      <td>92</td>
+                    </tr>
+                    <tr>
+                      <td>World History</td>
+                      <td>Spring 2025</td>
+                      <td>85</td>
+                    </tr>
+                    <tr>
+                      <td>Biology</td>
+                      <td>Spring 2025</td>
+                      <td>90</td>
+                    </tr>
+                    <tr>
+                      <td>Introduction to Art</td>
+                      <td>Spring 2025</td>
+                      <td>87</td>
+                    </tr>
+                    <tr>
+                      <td>Physical Education</td>
+                      <td>Spring 2025</td>
+                      <td>81</td>
+                    </tr>
+                    <tr>
+                      <td>Computer Science 101</td>
+                      <td>Spring 2025</td>
+                      <td>89</td>
+                    </tr>
+                    <tr>
+                      <td>Microeconomics</td>
+                      <td>Spring 2025</td>
+                      <td>84</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+
             </div>
           </div>
         </div>
-                      <button class="download-btn" onclick="window.print()">Download PDF</button>
-
       </section>
-      
     </main>
 
     <!-- Footer -->
